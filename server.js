@@ -1,12 +1,32 @@
 const http = require('http');
-const PORT = 8000;
-var dt = require('./index');
+const PORT = process.env.PORT;
 
-http.createServer(function (req, res) {
-    res.write('hello world js\n');
 
-    res.end();
+const server = http.createServer((req, res) =>{
 
-}).listen(PORT, () => {
-    console.log(`This is the current data and time ${dt.myDataTime()}`);
+    try{
+        if (req.method === 'GET') {
+            if (req.url ==='/') {
+                res.writeHead(200, {'Content-Type': 'text/html' });
+                res.end('<h1>Homepage</h1>');
+            } else if(req.url === '/about'){
+                res.writeHead(200, {'Content-Type': 'text/html' });
+                res.end('<h1>About</h1>');
+            }
+            else {
+                res.writeHead(404, {'Content-Type': 'text/html' });
+                res.end('<h1>Not found</h1>');
+            }
+        }
+        else {
+            throw new Error('Method not allowed')
+        }
+    }
+    catch (error) {
+        res.writeHead(500, {'Content-Type': 'text/html' });
+        res.end('<h1>Server Error</h1>');
+    }
+
+}).listen(PORT, () =>{
+    console.log(`This is the current PORT:${PORT}`);
 });
