@@ -1,17 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HomePage</title>
+    <title>Spritzy Cleaning</title>
     <style>
+        .box {
+            position: static;
+            width: 700px;
+            height: 400px;
+            margin-left: 55%;
+            border-color: rgb(1, 54, 17);
+            border-radius: 10px;
+            border-style: solid;
+            top: 100px;
+            background-color: aliceblue;
+            float: left;
+        }
         body{
-            background-color: aqua;
+            background-color: lightgray;
+        }
+        .parent {
+            width: 90%;
+            margin: auto;
+            background-color: rgb(236, 235, 235);
+            height: 100%;
+            top: 0;
+        }
+        .Navdata {
+            background-color: lightgray;
+
+            font-size: 30px;
+            padding: 10px;
+        }
+        .Navdata:hover {
+            background-color: grey;
+        }
+        .tablenav {
+            width: 100%;
+            margin: auto;
+            background-color: lightgray;
+            align-items: center;
+            position: sticky;
+            top: 0;
+        }
+        .input {
+            color: black;
+
+            top: 25px;
+        }
+        .name,
+        .phone {
+            font-size: 20px;
+        }
+        .phonename{
+            width: 100%;
+            margin: auto;
+            left: 10px;
+            padding-left: 50px;
+        }
+        .email {
+            margin: auto;
+            width: 98%;
+            font-size: 20px;
+        }
+        .selectservice {
+            margin: auto;
+            width: 100%;
+            font-size: large;
+            font-size: 20px;
+        }
+        .submitbutton {
+            font-size: 35px;
+            margin: auto;
+            width: 100%;
+            transition: 0.2s;
+            border-radius: 5px;
+            background-color: white;
+            color: rgb(0, 117, 191);
+            border-color: green;
+        }
+
+        .submitbutton:hover {
+            background-color: rgb(116, 207, 11);
+            color: rgb(1, 37, 7);
+            border-color: rgb(1, 37, 7);
         }
     </style>
 </head>
+
 <body>
-    <h1>HomePage</h1>
-    <p1>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat aliquam ullam deleniti adipisci a id nostrum consectetur fugit, cumque repudiandae aliquid explicabo maiores earum natus, quo iste possimus voluptas tempore.</p1>
+    <table class="tablenav">
+        <tr>
+            <td class="Navdata"><a href="#">Home</a></td>
+            <td class="Navdata"><a href="#">Pricing</a></td>
+            <td class="Navdata"><a href="#">About us</a></td>
+            <td class="Navdata"><a href="#">FAQ</a></td>
+        </tr>
+    </table>
+
+    <!--About us-->
+    <div class="parent">
+        <img src="pdf.png" width="400px"></img>
+        <div>
+            <h1 style="font-size: 50px;">About our company</h1>
+            <h2>"Our Success Cleaning Up your Mess"</h2>
+            <p1 style="font-family:Arial, Helvetica, sans-serif; font-size: 22px;">
+                A family-owned business based in the Northern Beaches of Sydney.
+                We are actively involved in the day work and operation ensuring that every customer receives
+                individualized
+                and appropriate care and service. Our own personal experience of the consequences, dangers and side
+                effects
+                of exposure to harsh chemicals, led us to offer this premium service to likeminded individuals and
+                companies.
+            </p1>
+        </div>
+        <br>
+        <!-- Log in DIV-->
+        <div class="box">
+            <h style="font-size: 40px; padding: 10px; color: black; font-family: Arial;">Get an
+                estimate
+            </h>
+            <form class="input">
+                <div class="phonename">
+                    <table style="margin: auto; width: 100%;">
+                        <tr>
+                            <td><label class="name">Name</label></td>
+                            <td><label class="phone">Phone number</label></td>
+                        </tr>
+                        <tr>
+                            <td><input class="name" type="text"></td>
+                            <td><input class="phone" type="text"></td>
+                        </tr>
+                    </table>
+                </div>
+                <div style="margin: auto; width: 75%;">
+                    <label class="email">Email</label><br>
+                    <input type="email" class="email" style="border-style: solid; border-radius: 5px;">
+                </div>
+                <br>
+                <div style="margin: auto; width: 75%;">
+                    <p1 style="font-size: 22px;">Service Name</p1><br>
+                    <select class="selectservice">
+                        <option class="selectservice">Select Service</option>
+                        <option class="selectservice">HYPOALLERGENIC CLEAN</option>
+                        <option class="selectservice">CARPETCLEANING</option>
+                        <option class="selectservice">END OF LEASE CLEANING</option>
+                        <option class="selectservice">START OF LEASE</option>
+                        <option class="selectservice">BARTHROOM/SHOWER</option>
+                        <option class="selectservice">COMMERCIAL CLEANING</option>
+                    </select>
+                </div>
+                <div style="width:85%; margin: auto; padding-top: 30px; padding-bottom: 20px;">
+                    <button class="submitbutton">Submit</button>
+                </div>
+            </form>
+        </div><br>
+        <img src="pdf.png">
+        <h1>Why choose us?</h1>
+        <img src="anytime floow.jpg" style="border-style: solid;">
+    </div>
 </body>
+
 </html>
